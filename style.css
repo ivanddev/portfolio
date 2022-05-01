@@ -29,18 +29,18 @@ p {
 }
 
 @media (min-width: 1400px) {
-    .container {
+    .container-modifier {
         max-width: 1120px;
     }
 }
 
 @media (min-width: 1200px) {
-    .container {
+    .container-modifier {
         max-width: 1000px;
     }
 }
 @media (max-width:1200px) {
-    .container {
+    .container-modifier {
         max-width: 100%;
     }
 }
@@ -83,7 +83,7 @@ p {
 .index {
     grid-area: index;
     display: grid;
-    grid-template-rows: 60% 40%;
+    grid-template-rows: 70% 30%;
     grid-template-areas:
         "index__firstdiv"
         "index__seconddiv";
@@ -98,12 +98,13 @@ p {
     grid-area: index__firstdiv;
     display: grid;
     grid-template-rows: 40% 10% 5% 30% 15%;
+    grid-template-columns: 85% 15%;
     grid-template-areas:
-        "index__div-img"
-        "index__div-name"
-        "index__div-name-p"
-        "index__div-paragraph"
-        "index__div-button";
+        "index__div-img index__div-img"
+        "index__div-name index__div-name"
+        "index__div-name-p index__div-name-p"
+        "index__div-paragraph index__div-learn-more"
+        "index__div-button index__div-button";
     justify-items: center;
 }
 
@@ -132,14 +133,70 @@ p {
     font-size: 0.8rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.index__div-learn-more{
+    grid-area: index__div-learn-more;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .index__div-button {
     grid-area: index__div-button;
     align-self: center;
 }
+/* BUTTON 1 STYLE */
+/* From uiverse.io by @Custyyyy */
+.button-name {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px,rgba(45, 35, 66, 0.15) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 38px;
+    width: 30px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+   }
+   
+   .button-name:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+   }
+   
+   .button-name:hover {
+    box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+   }
+   
+   .button-name:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+   }
+/* BUTTON 1 STYLE */
 
-/* BUTTON STYLE */
-.btn {
+
+
+/* BUTTON 2 STYLE */
+.btn-contact {
     position: relative;
     margin: auto;
     transition: all 0.2s ease;
@@ -147,7 +204,7 @@ p {
     background: none;
 }
 
-.btn:before {
+.btn-contact:before {
     content: "";
     position: absolute;
     top: 0;
@@ -160,7 +217,7 @@ p {
     transition: all 0.3s ease;
 }
 
-.btn span {
+.btn-contact span {
     position: relative;
     font-family: "Ubuntu", sans-serif;
     font-size: 0.7rem;
@@ -169,7 +226,7 @@ p {
     color: #234567;
 }
 
-.btn svg {
+.btn-contact svg {
     position: relative;
     top: 0;
     margin-left: 10px;
@@ -182,16 +239,16 @@ p {
     transition: all 0.3s ease;
 }
 
-.btn:hover:before {
+.btn-contact:hover:before {
     width: 100%;
     background: #b1dae7;
 }
 
-.btn:hover svg {
+.btn-contact:hover svg {
     transform: translateX(0);
 }
 
-.btn:active {
+.btn-contact:active {
     transform: scale(0.95);
 }
 
@@ -204,24 +261,16 @@ p {
 .index__seconddiv {
     width: 80%;
     height: 60%;
-    background: rgb(236, 236, 236);
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-    margin-bottom: 30px;
-    background-color: #fff;
     grid-area: index__seconddiv;
-    display: grid;
-    grid-template-rows: 20% 80%;
-    grid-template-areas:
-        "index__service-title"
-        "index__service";
     align-items: center;
+    /* CHECK TRANSITION IN MOBILE */
+    transition: all .5s;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    /* CHECK TRANSITION IN MOBILE */
 }
-
-.index__service-title {
-    margin-left: 7%;
-    align-self: end;
-    grid-area: index__service-title;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.index__seconddiv:hover{
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+        transition: all .5s;
 }
 
 .index__service {

@@ -13,7 +13,7 @@
     <title>Iván Díaz</title>
 </head>
 
-<body class="body container">
+<body class="body container-modifier">
     <header class="header">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -47,6 +47,21 @@
     </header>
     <section class="index" id="index">
         <div class="index__firstdiv">
+            <!-- PROBANDO MODALLLL -->
+            <div id="showmodal" class="modal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="modalBasicLabel">Modal title</h5>
+                      <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">Soy de nacionalidad Argentina, tengo experiencia y me gustan los medios digitales, y por ello comencé en lo que es Desarrollo Web, que actualmente estudio en la escuela digital de Coderhouse. </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <div class="index__div-img">
                 <img class="programmer__img" src="img/index-programming.png" alt="Programming Image">
             </div>
@@ -58,13 +73,15 @@
             </div>
             <div class="index__div-paragraph">
                 <p class="h5">Hola!</p>
-                <p class="h7">Soy Iván, front-end developer.</p>
-                <p class="h7">En éste 2022 inició mi interes por el desarrollo, enfocado momentaneamente en la rama web
+                <p class="h7">Soy Iván, front-end developer. En éste 2022 inició mi interés por el desarrollo, enfocado momentaneamente en la rama web
                     y
                     profesionalizandome hasta lograr expandirme en otras ramas de la programación.</p>
             </div>
+            <div class="index__div-learn-more">
+                <button role="button" class="button-name" data-bs-toggle="modal" data-bs-target="#showmodal">+</button>
+            </div>
             <div class="index__div-button">
-                <a href="#contact"><button class="btn">
+                <a href="#contact"><button class="btn-contact">
                         <span>Contacto</span>
                         <svg viewBox="0 0 13 10" height="10px" width="15px">
                             <path d="M1,5 L11,5"></path>
@@ -73,16 +90,13 @@
                     </button></a>
             </div>
         </div>
-        <div class="index__seconddiv">
-            <div class="index__service-title">
-                <p class="h2">Servicio</p>
-            </div>
+        <div class="index__seconddiv shadow p-3 mb-5 bg-body rounded">
             <div class="index__service">
                 <div class="index__service__div-img">
                     <img class="service__img" src="img/index-resume.png" alt="Resume Image">
                 </div>
                 <div class="index__service__div-paragraph">
-                    <p class="h6">Crea tu página web adaptada a tu negocio.</p>
+                    <a href="#service" class="h6 text-decoration-none text-black">Crea tu página web adaptada a tu negocio.</a>
                 </div>
             </div>
         </div>
