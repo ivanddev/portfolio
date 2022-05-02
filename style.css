@@ -112,6 +112,7 @@ p {
     grid-area: index__div-name-p;
     font-family: inherit;
     letter-spacing: 2px;
+    align-self: center;
 }
 
 .index__div-paragraph {
