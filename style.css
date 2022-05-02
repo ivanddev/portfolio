@@ -76,28 +76,23 @@ p {
 .index {
     grid-area: index;
     display: grid;
-    grid-template-rows: 70% 30%;
-    grid-template-areas:
-        "index__firstdiv"
-        "index__seconddiv";
     justify-items: center;
     align-items: center;
+    height: 100%;
 }
 
-.index__firstdiv {
+.index__div {
     width: 90%;
     height: 100%;
     background-color: #fff;
-    grid-area: index__firstdiv;
     display: grid;
-    grid-template-rows: 40% 10% 5% 30% 15%;
-    grid-template-columns: 85% 15%;
+    grid-template-rows: 200px 5% 5% 40% 15%;
     grid-template-areas:
-        "index__div-img index__div-img"
-        "index__div-name index__div-name"
-        "index__div-name-p index__div-name-p"
-        "index__div-paragraph index__div-learn-more"
-        "index__div-button index__div-button";
+        "index__div-img"
+        "index__div-name"
+        "index__div-name-p"
+        "index__div-paragraph"
+        "index__div-button";
     justify-items: center;
 }
 
@@ -124,12 +119,15 @@ p {
     align-self: center;
     font-size: 0.8rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 0.25rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    padding: 1.5rem;
 }
 .index__div-learn-more{
     grid-area: index__div-learn-more;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
 }
 
 .index__div-button {
@@ -241,24 +239,6 @@ p {
 
 .programmer__img {
     height: 100%;
-}
-
-.index__seconddiv {
-    width: 80%;
-    height: 60%;
-    grid-area: index__seconddiv;
-    align-items: center;
-}
-
-.index__service {
-    grid-area: index__service;
-    display: flex;
-    align-items: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.service__img {
-    height: 100px;
 }
 
 /* ---------------------------SECTION SERVICE--------------------------- */
