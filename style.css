@@ -44,7 +44,7 @@ p {
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: auto 93vh 700px 800px 600px 50px;
+    grid-template-rows: 50px 93vh 700px 800px 600px 50px;
     grid-template-areas:
         "header"
         "index"
@@ -57,7 +57,6 @@ p {
 /* ---------------------------HEADER--------------------------- */
 .header {
     grid-area: header;
-    background-color: #00BFA6;
 }
 
 .header-icons__img {
@@ -245,7 +244,7 @@ p {
 
 
 .programmer__img {
-    height: 100%;
+    height: 90%;
 }
 
 /* ---------------------------SECTION SERVICE--------------------------- */
@@ -628,7 +627,7 @@ p {
     grid-area: contact;
     background-color: #f8f8ff;
     display: grid;
-    grid-template-rows: 30% 70%;
+    grid-template-rows: 40% 40%;
     grid-template-areas: 
     "contact__div-title"
     "contact__div-icons";
@@ -643,14 +642,58 @@ p {
 .contact__div-icons{
     grid-area: contact__div-icons;
     display: flex;
-    height: 302px;
-    background-image: url(img/contact.png);
-    background-size: cover;
-    justify-self: center;
+    height: 210px;
+    width: 200px;
+    position: relative;
+    align-self: center;
+
+}
+.contact__div__img0{
+    width: 200px;
+}
+.img0{
+    height: auto;
+    position: absolute;
+
+}
+.contact__div__icons{
+    height: auto;
+    position: absolute;
+    animation: icons-animation 2.5s ease-in-out infinite both;
+}
+@keyframes icons-animation {
+    0%{
+        filter: grayscale(0);
+    }
+    50%{
+        filter: grayscale(0.5);
+    }
+    100%{
+        filter: grayscale(0);
+    }
+}
+
+.img1{
+    top: 93px;
+    left: -16px;
+}
+.img2 {
+    left: 31px;
+    top: 10px;
+}
+.img3{
+    left: 124px;
+    top: 37px;
+}
+.img4{
+    left: 161px;
+    top: 109px;
+}
+.contact__div__img{
+    height: 50px;
 }
 
 /* ---------------------------FOOTER--------------------------- */
 .footer {
     grid-area: footer;
-    background-color: #8a2be2;
 }
