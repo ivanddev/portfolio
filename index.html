@@ -49,18 +49,20 @@
         <div class="index__div">
             <div id="showmodal" class="modal" tabindex="-1">
                 <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="modalBasicLabel">Más sobre mí</h5>
-                      <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalBasicLabel">Más sobre mí</h5>
+                            <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">Soy de nacionalidad Argentina. Me gustan los medios digitales, y por
+                            ello comencé en lo que es Desarrollo Web, actualmente estudio en la escuela online de
+                            Coderhouse. </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
                     </div>
-                    <div class="modal-body">Soy de nacionalidad Argentina. Me gustan los medios digitales, y por ello comencé en lo que es Desarrollo Web, actualmente estudio en la escuela online de Coderhouse. </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                  </div>
                 </div>
-              </div>
+            </div>
             <div class="index__div-img">
                 <img class="programmer__img" src="img/index-programming.png" alt="Programming Image">
             </div>
@@ -72,21 +74,26 @@
             </div>
             <div class="index__div-paragraph">
                 <p class="h5">Hola!</p>
-                <p class="h7">Soy Iván, front-end developer. En éste 2022 inició mi interés por el desarrollo, enfocado momentaneamente en la rama web
+                <p class="h7">Soy Iván, front-end developer. En éste 2022 inició mi interés por el desarrollo, enfocado
+                    momentaneamente en la rama web
                     y
                     profesionalizandome hasta lograr expandirme en otras ramas de la programación.</p>
-                    <div class="index__div-learn-more">
-                        <button role="button" class="button-name" data-bs-toggle="modal" data-bs-target="#showmodal">+</button>
-                    </div>
+                <div class="index__div-learn-more">
+                    <button role="button" class="button-name" data-bs-toggle="modal"
+                        data-bs-target="#showmodal">+</button>
+                </div>
             </div>
 
             <div class="index__div-button">
                 <a href="#contact"><button class="cta">
-                    <span class="hover-underline-animation"> Contacto </span>
-                    <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
-                      <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
-                    </svg>
-                  </button>
+                        <span class="hover-underline-animation"> Contacto </span>
+                        <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10"
+                            viewBox="0 0 46 16">
+                            <path id="Path_10" data-name="Path 10"
+                                d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                                transform="translate(30)"></path>
+                        </svg>
+                    </button>
                     </button></a>
             </div>
         </div>
@@ -136,9 +143,38 @@
         <div class="portfolio__div-title">
             <h2>Proyectos</h2>
         </div>
-        <div class="portfolio__div-imgs">
-            <img src="img/proyecto-zierk.ico" alt="Zierk Portfolio" class="portfolio__img">
-            <p class="font-monospace">ZIERK Portfolio</p>
+        <div class="portfolio__div-cards">
+            <div class="cards">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="img/proyecto-zierk.ico">
+                        <h3>Portafolio</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p>Proyecto diseñador gráfico estilo gaming/videojuegos.</p>
+                        <a href="#">Ver proyecto</a>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="face face1 in-progress">
+                    <div class="content">
+                        <div class="loader">
+                            <div class="loader-square"></div>
+                            <div class="loader-square"></div>
+                            <div class="loader-square"></div>
+                            <div class="loader-square"></div>
+                            <div class="loader-square"></div>
+                            <div class="loader-square"></div>
+                            <div class="loader-square"></div>
+                            <div class="loader-square-static"></div>
+                            </div>
+                        <h3>En proceso</h3>
+                    </div>
+                </div>
+            </div>
         </div>
         </div>
     </section>
