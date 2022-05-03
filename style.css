@@ -44,7 +44,7 @@ p {
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: auto 93vh 700px 800px 700px 50px;
+    grid-template-rows: auto 93vh 700px 800px 600px 50px;
     grid-template-areas:
         "header"
         "index"
@@ -627,6 +627,26 @@ p {
 .contact {
     grid-area: contact;
     background-color: #f8f8ff;
+    display: grid;
+    grid-template-rows: 30% 70%;
+    grid-template-areas: 
+    "contact__div-title"
+    "contact__div-icons";
+    justify-items: center;
+}
+.contact__div-title{
+    grid-area: contact__div-title;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact__div-icons{
+    grid-area: contact__div-icons;
+    display: flex;
+    height: 302px;
+    background-image: url(img/contact.png);
+    background-size: cover;
+    justify-self: center;
 }
 
 /* ---------------------------FOOTER--------------------------- */
