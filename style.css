@@ -12,7 +12,7 @@ p {
     margin-bottom: 0;
 }
 
-.h7 {
+.p1 {
     margin-top: 0;
     margin-bottom: 0;
     font-weight: 500;
@@ -44,7 +44,7 @@ p {
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: 50px 93vh 700px 800px 600px 50px;
+    grid-template-rows: auto 93vh 700px 800px 600px 50px;
     grid-template-areas:
         "header"
         "index"
@@ -198,7 +198,6 @@ p {
 .cta span {
     padding-bottom: 7px;
     letter-spacing: 4px;
-    font-size: 10px;
     padding-right: 15px;
     text-transform: uppercase;
 }
@@ -239,7 +238,6 @@ p {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
-
 /* BUTTON 2 STYLE */
 
 
