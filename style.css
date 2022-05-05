@@ -694,4 +694,5 @@ p {
 /* ---------------------------FOOTER--------------------------- */
 .footer {
     grid-area: footer;
+    background-color: #00BFA6;
 }
