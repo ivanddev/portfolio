@@ -44,10 +44,10 @@ p {
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-template-rows: auto 93vh 700px 800px 600px 50px;
+    grid-template-rows: auto 93vh 700px 800px 600px auto;
     grid-template-areas:
         "header"
-        "index"
+        "home"
         "service"
         "portfolio"
         "contact"
@@ -73,51 +73,51 @@ p {
     right: 0 !important;
 }
 
-/* ---------------------------SECTION INDEX--------------------------- */
-.index {
-    grid-area: index;
+/* ---------------------------SECTION HOME--------------------------- */
+.home {
+    grid-area: home;
     display: grid;
     justify-items: center;
     align-items: center;
     height: 100%;
 }
 
-.index__div {
+.home__div {
     width: 90%;
     height: 100%;
     background-color: #fff;
     display: grid;
     grid-template-rows: 200px 5% 5% 40% 15%;
     grid-template-areas:
-        "index__div-img"
-        "index__div-name"
-        "index__div-name-p"
-        "index__div-paragraph"
-        "index__div-button";
+        "home__div-img"
+        "home__div-name"
+        "home__div-name-p"
+        "home__div-paragraph"
+        "home__div-button";
     justify-items: center;
 }
 
-.index__div-img {
-    grid-area: index__div-img;
+.home__div-img {
+    grid-area: home__div-img;
 }
 
-.index__div-name {
-    grid-area: index__div-name;
+.home__div-name {
+    grid-area: home__div-name;
 }
 
 .name {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.index__div-name-p {
-    grid-area: index__div-name-p;
+.home__div-name-p {
+    grid-area: home__div-name-p;
     font-family: inherit;
     letter-spacing: 2px;
     align-self: center;
 }
 
-.index__div-paragraph {
-    grid-area: index__div-paragraph;
+.home__div-paragraph {
+    grid-area: home__div-paragraph;
     align-self: center;
     font-size: 0.8rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -126,15 +126,15 @@ p {
     padding: 1.5rem;
 }
 
-.index__div-learn-more {
-    grid-area: index__div-learn-more;
+.home__div-learn-more {
+    grid-area: home__div-learn-more;
     display: flex;
     align-items: center;
     justify-content: end;
 }
 
-.index__div-button {
-    grid-area: index__div-button;
+.home__div-button {
+    grid-area: home__div-button;
     align-self: center;
 }
 
@@ -625,10 +625,11 @@ p {
     grid-area: contact;
     background-color: #f8f8ff;
     display: grid;
-    grid-template-rows: 40% 40%;
+    grid-template-rows: 20% 70% 10%;
     grid-template-areas: 
     "contact__div-title"
-    "contact__div-icons";
+    "contact__div-icons"
+    "div-arrow";
     justify-items: center;
 }
 .contact__div-title{
@@ -640,17 +641,18 @@ p {
 .contact__div-icons{
     grid-area: contact__div-icons;
     display: flex;
-    height: 210px;
+    height: 203px;
     width: 200px;
     position: relative;
     align-self: center;
+    border-bottom: 3px solid #e3e3e3;
 
 }
 .contact__div__img0{
     width: 200px;
 }
 .img0{
-    height: auto;
+    height: 100%;
     position: absolute;
 
 }
@@ -691,8 +693,27 @@ p {
     height: 50px;
 }
 
+.div-arrow{
+    grid-area: div-arrow;
+    position: relative;
+    left: 40%;
+}
+.arrow {
+    margin: 25px 0;
+	width: calc(15px + 1vw);
+	height: calc(15px + 1vw);
+	transform: rotate(-45deg);
+		border-width: calc(1px + 0.3vw) calc(1px + 0.3vw) 0 0;
+		border-style: solid;
+		border-color: #000;
+}
+
 /* ---------------------------FOOTER--------------------------- */
 .footer {
     grid-area: footer;
-    background-color: #00BFA6;
+    background-color: #f8f8ff;
+    color: #000;
+    padding: 10px 0;
+    letter-spacing: 3px;
+    border: 1px dashed #000;
 }
