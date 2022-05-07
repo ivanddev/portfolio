@@ -684,7 +684,7 @@ p {
         filter: grayscale(0);
     }
     50%{
-        filter: grayscale(0.5);
+        filter: grayscale(0.7);
     }
     100%{
         filter: grayscale(0);
