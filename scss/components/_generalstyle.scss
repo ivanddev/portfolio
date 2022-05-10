@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin-bottom: 0;
+}
+.h2{
+    margin-bottom: 0;
+}
+.p1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1.2;
+    font-size: calc(0.7rem + 0.5vw);
+}
+
+.p2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: normal;
+    line-height: 1.2;
+    font-size: calc(0.5rem + 0.3vw);
+}
+
+.body {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto 93vh 700px 800px 600px auto;
+    grid-template-areas:
+        "header"
+        "home"
+        "service"
+        "portfolio"
+        "contact"
+        "footer";
+}
