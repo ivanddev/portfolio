@@ -1,0 +1,85 @@
+// tools
+.tools{
+    grid-area: tools;
+    @include display(grid, center, start);
+    grid-template-rows: 25% 40% 35%;
+    grid-template-areas:
+        "tools__firstdiv"
+        "tools__seconddiv"
+        "tools_thirddiv";
+    justify-items: center;
+    background-color: nth($color, 2);
+    .tools__firstdiv {
+        grid-area: tools__firstdiv;
+        align-self: end;
+        img{
+            height: 80px;
+        }
+    }
+    .tools__seconddiv {
+        grid-area: tools__seconddiv;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "tools__div-title tools__div-paragraph";
+        .tools__div-title {
+            grid-area: tools__div-title;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .tools__div-paragraph {
+            grid-area: tools__div-paragraph;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    }
+    .tools__thirddiv {
+        grid-area: tools_thirddiv;
+        width: 80%;
+        height: 100%;
+        .tools__div-icons {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+                "tools__div__div-icon1 tools__div__div-icon2 tools__div__div-icon3"
+                "tools__div__div-icon4 tools__div__div-icon5 tools__div__div-icon6";
+            height: 70%;
+            #center{
+                @include display(flex, center, start);
+            }
+            img {
+                height: 30px;
+            }
+            b {
+                font-size: 11px;
+                margin-left: 5px;
+                font-family: sans-serif;
+            }
+
+            .tools__div__div-icon1 {
+                grid-area: tools__div__div-icon1;
+            }
+            
+            .tools__div__div-icon2 {
+                grid-area: tools__div__div-icon2;
+            }
+            
+            .tools__div__div-icon3 {
+                grid-area: tools__div__div-icon3;
+            }
+            
+            .tools__div__div-icon4 {
+                grid-area: tools__div__div-icon4;
+            }
+            
+            .tools__div__div-icon5 {
+                grid-area: tools__div__div-icon5;
+            }
+            
+            .tools__div__div-icon6 {
+                grid-area: tools__div__div-icon6;
+            }
+        }
+    }
+}

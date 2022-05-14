@@ -2,27 +2,23 @@
 .portfolio{
     height: auto;
     grid-area: portfolio;
-    display: grid;
+    @include display(grid, center, center);
     grid-template-rows: 10% 90%;
     grid-template-areas:
         "portfolio__div-title"
         "portfolio__div-cards";
-    justify-content: center;
     align-self: center;
     text-align: center;
     .portfolio__div-title {
         grid-area: portfolio__div-title;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         letter-spacing: 2px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include display(flex, center, center);
     }
     .portfolio__div-cards {
         grid-area: portfolio__div-cards;
         position: relative;
-        display: flex;
-        justify-content: space-between;
+        @include  display(flex, center, space-between);
         flex-direction: column;
         margin: auto;
         .cards{
@@ -36,9 +32,7 @@
             .face.face1{
                 position: relative;
                 background: #333;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include display(flex, center, center);
                 z-index: 1;
                 transform: translateY(100px);
                 .content{
@@ -59,9 +53,7 @@
             .face.face2{
                 position: relative;
                 background: #fff;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include display(flex, center, center);
                 padding: 20px;
                 box-sizing: border-box;
                 box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);

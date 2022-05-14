@@ -32,7 +32,7 @@ p {
   margin: 0 auto;
   display: grid;
   grid-template-rows: auto 93vh 700px 800px 600px auto;
-  grid-template-areas: "header" "home" "service" "portfolio" "contact" "footer";
+  grid-template-areas: "header" "home" "tools" "portfolio" "contact" "footer";
 }
 
 header {
@@ -50,11 +50,20 @@ header .navbar-light .icons .header-icons__img, header .navbar-toggler .icons .h
   height: 24px;
 }
 
+footer {
+  grid-area: footer;
+  background-color: #f8f8ff;
+  color: #000;
+  padding: 10px 0;
+  letter-spacing: 3px;
+  border: 1px dashed #000;
+}
+
 .home {
   grid-area: home;
-  display: grid;
-  justify-items: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
 }
 .home .home__div {
@@ -62,9 +71,9 @@ header .navbar-light .icons .header-icons__img, header .navbar-toggler .icons .h
   height: 100%;
   background-color: #fff;
   display: grid;
-  grid-template-rows: 200px 5% 5% 40% 15%;
-  grid-template-areas: "home__div-img" "home__div-name" "home__div-name-p" "home__div-paragraph" "home__div-button";
   justify-items: center;
+  grid-template-rows: 200px 5% 5% auto 15%;
+  grid-template-areas: "home__div-img" "home__div-name" "home__div-name-p" "home__div-paragraph" "home__div-button";
 }
 .home .home__div .home__div-img {
   grid-area: home__div-img;
@@ -92,54 +101,6 @@ header .navbar-light .icons .header-icons__img, header .navbar-toggler .icons .h
   border-radius: 0.25rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   padding: 1.5rem;
-}
-.home .home__div .home__div-paragraph .home__div-learn-more {
-  grid-area: home__div-learn-more;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-.home .home__div .home__div-paragraph .home__div-learn-more .button-more {
-  align-items: center;
-  appearance: none;
-  background-color: #FCFCFD;
-  border-radius: 4px;
-  border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px, rgba(45, 35, 66, 0.15) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  box-sizing: border-box;
-  color: #36395A;
-  cursor: pointer;
-  display: inline-flex;
-  font-family: "JetBrains Mono", monospace;
-  height: 38px;
-  width: 30px;
-  justify-content: center;
-  line-height: 1;
-  list-style: none;
-  overflow: hidden;
-  padding-left: 16px;
-  padding-right: 16px;
-  position: relative;
-  text-align: left;
-  text-decoration: none;
-  transition: box-shadow 0.15s, transform 0.15s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  will-change: box-shadow, transform;
-  font-size: 18px;
-}
-.home .home__div .home__div-paragraph .home__div-learn-more .button-more:focus {
-  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-}
-.home .home__div .home__div-paragraph .home__div-learn-more .button-more:hover {
-  box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  transform: translateY(-2px);
-}
-.home .home__div .home__div-paragraph .home__div-learn-more .button-more:active {
-  box-shadow: #D6D6E7 0 3px 7px inset;
-  transform: translateY(2px);
 }
 .home .home__div .home__div-button {
   grid-area: home__div-button;
@@ -187,89 +148,92 @@ header .navbar-light .icons .header-icons__img, header .navbar-toggler .icons .h
   transform-origin: bottom left;
 }
 
-.service {
-  grid-area: service;
+.tools {
+  grid-area: tools;
   display: grid;
-  grid-template-rows: 25% 40% 35%;
-  grid-template-areas: "service__firstdiv" "service__seconddiv" "service_thirddiv";
-  justify-items: center;
   align-items: center;
+  justify-content: start;
+  grid-template-rows: 25% 40% 35%;
+  grid-template-areas: "tools__firstdiv" "tools__seconddiv" "tools_thirddiv";
+  justify-items: center;
   background-color: #f8f8ff;
 }
-.service .service__firstdiv {
-  grid-area: service__firstdiv;
+.tools .tools__firstdiv {
+  grid-area: tools__firstdiv;
   align-self: end;
 }
-.service .service__firstdiv img {
+.tools .tools__firstdiv img {
   height: 80px;
 }
-.service .service__seconddiv {
-  grid-area: service__seconddiv;
+.tools .tools__seconddiv {
+  grid-area: tools__seconddiv;
   width: 80%;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-areas: "service__div-title service__div-paragraph";
+  grid-template-areas: "tools__div-title tools__div-paragraph";
 }
-.service .service__seconddiv .service__div-title {
-  grid-area: service__div-title;
+.tools .tools__seconddiv .tools__div-title {
+  grid-area: tools__div-title;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   text-align: center;
   letter-spacing: 2px;
 }
-.service .service__seconddiv .service__div-paragraph {
-  grid-area: service__div-paragraph;
+.tools .tools__seconddiv .tools__div-paragraph {
+  grid-area: tools__div-paragraph;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
-.service .service__thirddiv {
-  grid-area: service_thirddiv;
+.tools .tools__thirddiv {
+  grid-area: tools_thirddiv;
   width: 80%;
   height: 100%;
 }
-.service .service__thirddiv .service__div-icons {
+.tools .tools__thirddiv .tools__div-icons {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "service__div__div-icon1 service__div__div-icon2 service__div__div-icon3" "service__div__div-icon4 service__div__div-icon5 service__div__div-icon6";
+  grid-template-areas: "tools__div__div-icon1 tools__div__div-icon2 tools__div__div-icon3" "tools__div__div-icon4 tools__div__div-icon5 tools__div__div-icon6";
   height: 70%;
 }
-.service .service__thirddiv .service__div-icons #center {
+.tools .tools__thirddiv .tools__div-icons #center {
   display: flex;
   align-items: center;
+  justify-content: start;
 }
-.service .service__thirddiv .service__div-icons img {
+.tools .tools__thirddiv .tools__div-icons img {
   height: 30px;
 }
-.service .service__thirddiv .service__div-icons b {
+.tools .tools__thirddiv .tools__div-icons b {
   font-size: 11px;
   margin-left: 5px;
   font-family: sans-serif;
 }
-.service .service__thirddiv .service__div-icons .service__div__div-icon1 {
-  grid-area: service__div__div-icon1;
+.tools .tools__thirddiv .tools__div-icons .tools__div__div-icon1 {
+  grid-area: tools__div__div-icon1;
 }
-.service .service__thirddiv .service__div-icons .service__div__div-icon2 {
-  grid-area: service__div__div-icon2;
+.tools .tools__thirddiv .tools__div-icons .tools__div__div-icon2 {
+  grid-area: tools__div__div-icon2;
 }
-.service .service__thirddiv .service__div-icons .service__div__div-icon3 {
-  grid-area: service__div__div-icon3;
+.tools .tools__thirddiv .tools__div-icons .tools__div__div-icon3 {
+  grid-area: tools__div__div-icon3;
 }
-.service .service__thirddiv .service__div-icons .service__div__div-icon4 {
-  grid-area: service__div__div-icon4;
+.tools .tools__thirddiv .tools__div-icons .tools__div__div-icon4 {
+  grid-area: tools__div__div-icon4;
 }
-.service .service__thirddiv .service__div-icons .service__div__div-icon5 {
-  grid-area: service__div__div-icon5;
+.tools .tools__thirddiv .tools__div-icons .tools__div__div-icon5 {
+  grid-area: tools__div__div-icon5;
 }
-.service .service__thirddiv .service__div-icons .service__div__div-icon6 {
-  grid-area: service__div__div-icon6;
+.tools .tools__thirddiv .tools__div-icons .tools__div__div-icon6 {
+  grid-area: tools__div__div-icon6;
 }
 
 .portfolio {
   height: auto;
   grid-area: portfolio;
   display: grid;
+  align-items: center;
+  justify-content: center;
   grid-template-rows: 10% 90%;
   grid-template-areas: "portfolio__div-title" "portfolio__div-cards";
-  justify-content: center;
   align-self: center;
   text-align: center;
 }
@@ -285,6 +249,7 @@ header .navbar-light .icons .header-icons__img, header .navbar-toggler .icons .h
   grid-area: portfolio__div-cards;
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   flex-direction: column;
   margin: auto;
@@ -302,8 +267,8 @@ header .navbar-light .icons .header-icons__img, header .navbar-toggler .icons .h
   position: relative;
   background: #333;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   z-index: 1;
   transform: translateY(100px);
 }
@@ -325,8 +290,8 @@ header .navbar-light .icons .header-icons__img, header .navbar-toggler .icons .h
   position: relative;
   background: #fff;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 20px;
   box-sizing: border-box;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
@@ -492,6 +457,83 @@ header .navbar-light .icons .header-icons__img, header .navbar-toggler .icons .h
   100% {
     left: 0;
     top: 0;
+  }
+}
+.contact {
+  grid-area: contact;
+  background-color: #f8f8ff;
+  display: grid;
+  grid-template-rows: 20% 70% 10%;
+  grid-template-areas: "contact__div-title" "contact__div-icons" "div-arrow";
+  justify-items: center;
+}
+.contact .contact__div-title {
+  grid-area: contact__div-title;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact .contact__div-icons {
+  grid-area: contact__div-icons;
+  display: flex;
+  height: 250px;
+  width: 200px;
+  position: relative;
+  align-self: center;
+  border-bottom: 3px solid #dfdfff;
+}
+.contact .contact__div-icons .img0 {
+  top: 46px;
+  height: 100%;
+  position: absolute;
+}
+.contact .contact__div-icons .img0 .contact__div__img0 {
+  width: 200px;
+}
+.contact .contact__div-icons .contact__div__icons {
+  height: auto;
+  position: absolute;
+  animation: icons-animation 2.5s ease-in-out infinite both;
+}
+.contact .contact__div-icons .contact__div__icons .contact__div__img {
+  height: 50px;
+}
+.contact .contact__div-icons .img1 {
+  top: 161px;
+  left: 149px;
+}
+.contact .contact__div-icons .img2 {
+  top: 31px;
+  left: 41px;
+}
+.contact .contact__div-icons .img3 {
+  top: 84px;
+  left: 124px;
+}
+.contact .div-arrow {
+  grid-area: div-arrow;
+  position: relative;
+  left: 40%;
+}
+.contact .div-arrow .arrow {
+  margin: 25px 0;
+  width: calc(15px + 1vw);
+  height: calc(15px + 1vw);
+  transform: rotate(-45deg);
+  border-width: calc(1px + 0.3vw) calc(1px + 0.3vw) 0 0;
+  border-style: solid;
+  border-color: #000;
+}
+
+@keyframes icons-animation {
+  0% {
+    filter: grayscale(0);
+  }
+  50% {
+    filter: grayscale(0.7);
+  }
+  100% {
+    filter: grayscale(0);
   }
 }
 

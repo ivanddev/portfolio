@@ -1,0 +1,8 @@
+footer{
+    grid-area: footer;
+    background-color: nth($color, 2);
+    color: nth($color, 5);
+    padding: 10px 0;
+    letter-spacing: 3px;
+    border: 1px dashed nth($color, 5);
+}
