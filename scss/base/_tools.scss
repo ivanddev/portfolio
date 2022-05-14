@@ -1,7 +1,7 @@
 // tools
 .tools{
     grid-area: tools;
-    @include display(grid, center, start);
+    @include display(grid, center, center);
     grid-template-rows: 25% 40% 35%;
     grid-template-areas:
         "tools__firstdiv"

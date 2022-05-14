@@ -152,7 +152,7 @@ footer {
   grid-area: tools;
   display: grid;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   grid-template-rows: 25% 40% 35%;
   grid-template-areas: "tools__firstdiv" "tools__seconddiv" "tools_thirddiv";
   justify-items: center;
